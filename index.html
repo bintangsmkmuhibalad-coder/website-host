@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Percabangan if-else-if</title>
+</head>
+<body>
+  <script>
+    var nilai = Number(prompt("IKAN YANG KAMU BELI DI ETALASE BERAPA:"));
+    var grade = "";
+
+    if (nilai >= 90) grade = "A";
+    else if (nilai >= 80) grade = "B+";
+    else if (nilai >= 70) grade = "B";
+    else if (nilai >= 60) grade = "C+";
+    else if (nilai >= 50) grade = "C";
+    else if (nilai >= 40) grade = "D";
+    else grade = "F";
+
+    document.write(`<p>Grade Anda adalah: ${grade}</p>`);
+  </script>
+</body>
+</html>

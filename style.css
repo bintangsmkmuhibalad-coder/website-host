@@ -1,0 +1,98 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.img-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.img-box img {
+  width: 100%;
+  height: auto;
+  transition: all 0.5s ease;
+  display: block;
+}
+
+.img-box p {
+  margin: 0;
+  padding: 10px;
+  background: #222;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Efek 1: Basic Zoom */
+.zoom-basic img:hover {
+  transform: scale(1.2);
+}
+
+/* Efek 2: Quick Zoom-in */
+.zoom-quick img {
+  transition: transform 0.2s ease;
+}
+.zoom-quick img:hover {
+  transform: scale(1.3);
+}
+
+/* Efek 3: Point Zoom (zoom dari tengah titik tertentu) */
+.zoom-point img {
+  transform-origin: top left;
+}
+.zoom-point img:hover {
+  transform: scale(1.4);
+}
+
+/* Efek 4: Zoom + Rotasi */
+.zoom-rotate img:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Efek 5: Brighten Zoom-in */
+.zoom-bright img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.4);
+}
+
+/* Efek 6: Slow Motion Zoom */
+.zoom-slow img {
+  transition: transform 2s ease;
+}
+.zoom-slow img:hover {
+  transform: scale(1.4);
+}
+
+/* Efek 7: Blur-out Zoom-in */
+.zoom-blur img:hover {
+  transform: scale(1.3);
+  filter: blur(2px);
+}
+
+/* Efek 8: Colorize Zoom-in */
+.zoom-colorize img {
+  filter: grayscale(100%);
+  transition: transform 0.5s ease, filter 0.5s ease;
+}
+.zoom-colorize img:hover {
+  transform: scale(1.3);
+  filter: grayscale(0%) saturate(150%);
+}
